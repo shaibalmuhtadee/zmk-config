@@ -7,4 +7,4 @@ keymap -c keymap_config.yaml parse -c 12 -z ../config/corne.keymap > keymap.yaml
 # ./keymap_img_adjuster.py keymap.yaml
 
 echo '\n\nDrawing keymap...'
-keymap -c keymap_config.yaml draw --qmk-keyboard crkbd/rev1 --qmk-layout LAYOUT_split_3x6_3 keymap.yaml -s Base Numbers Nav Bluetooth Gaming > keymap.svg
+keymap -c keymap_config.yaml draw --qmk-keyboard crkbd/rev1 --qmk-layout LAYOUT_split_3x6_3 keymap.yaml -s Base Num Nav Bluetooth Gaming > keymap.svg
