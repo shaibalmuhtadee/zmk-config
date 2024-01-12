@@ -316,6 +316,20 @@ parse_config:
     'LG(V)': '⌘V'
     'LC(TAB)': '⌃↹'
     'LS(LC(TAB))': '⌃⇧↹'
+    N0: {t: '0', s: ')'}
+    N1: {t: '1', s: '!'}
+    N2: {t: '2', s: '@'}
+    N3: {t: '3', s: '#'}
+    N4: {t: '4', s: '$'}
+    N5: {t: '5', s: '%'}
+    N6: {t: '6', s: '^'}
+    N7: {t: '7', s: '%'}
+    N8: {t: '8', s: '*'}
+    N9: {t: '9', s: '('}
+    C_PP: '⏯'
+    C_VOL_UP: "VOL\nUP"
+    C_VOL_DOWN: "VOL\nDOWN"
+    C_MUTE: "VOL\nMUTE"
   zmk_combos:
     combo_tog_nav_word: {'a': 'bottom', 'o': +0.05}
     combo_tog_num_word: {'a': 'bottom', 'o': +0.25}
