@@ -6,19 +6,10 @@
 
 // Define layer numbers
 #define BASE 0
-#define BASE_QWERTY 1
-#define NAV_WORD 2
-#define NUM_WORD 3
-#define SYM_WORD 4
-#define NAV 5
-#define NUM 6
-#define SYM 7
-#define FUNC 8
-#define ADJUST 9
-#define LOWER 10
-#define MOUSE_KEYS 11
-#define MOUSE_TP 12
-#define MOUSE_SET 13
+#define NUM 1
+#define NAV 2
+#define BLTH 3
+#define GAMING 4
 
 
 // ZMK includes
@@ -27,11 +18,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 // Personal includes
-#include "includes/custom_keycodes.dtsi"
 #include "includes/settings.dtsi"
-//#include "includes/settings_pd.dtsi"
-#include "includes/conditional_layers.dtsi"
-#include "includes/macros.dtsi"
 #include "includes/combos.dtsi"
 #include "includes/behaviours_homerow_mods.dtsi"
 #include "includes/behaviours_mod_morph.dtsi"
@@ -52,9 +39,9 @@
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
      &mm_bspc_del             &hm_l LGUI A             &hm_l LALT S             &hm_l LCTRL D            &hm_shift_l LSHFT F      &kp G                         &kp H                    &hm_shift_r RSHFT J      &hm_r RCTRL K            &hm_r RALT L            &hm_r RGUI SEMI          &kp SINGLE_QUOTE
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
-     &kp LSHFT                &kp Z                    &kp X                    &kp C                    &kp V                    &kp B                         &kp N                    &kp M                    &kp COMMA                &kp DOT                 &kp SLASH                &kp UNDERSCORE
+     &mm_shift_caps_word_l    &kp Z                    &kp X                    &kp C                    &kp V                    &kp B                         &kp N                    &kp M                    &kp COMMA                &kp DOT                 &kp SLASH                &kp UNDERSCORE
 // ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────╯
-                                                                                &kp ESC                  &kp ENTER                &mo BASE_QWERTY               &mo NAV_WORD             &kp SPACE                &kp C_MUTE
+                                                                                &kp ESC                  &kp ENTER                &lt_num_word NUM NUM          &mo NAV                  &kp SPACE                &kp C_MUTE
 //                                                                            ╰────────────────────────┴────────────────────────┴────────────────────────╯    ╰────────────────────────┴────────────────────────┴────────────────────────╯
       >;
     };
@@ -80,9 +67,9 @@
 // ╭────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────╮    ╭────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────╮
      &kp TAB                  &kp F9                   &kp F10                  &kp F11                  &kp F12                  &trans                        &kp C_VOL_UP             &kp C_PP                 &kp UP                   &kp INSERT               &kp HOME                 &kp PAGE_UP
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤
-     &mm_bspc_del             &kp F5                   &kp F6                   &kp F7                   &kp F8                   &to SYM_WORD                  &kp C_VOL_DN             &kp LEFT                 &kp DOWN                 &kp RIGHT                &kp END                  &kp PAGE_DOWN
+     &mm_bspc_del             &kp F5                   &kp F6                   &kp F7                   &kp F8                   &to GAMING                    &kp C_VOL_DN             &kp LEFT                 &kp DOWN                 &kp RIGHT                &kp END                  &kp PAGE_DOWN
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤
-     &kp LSHFT                &kp F1                   &kp F2                   &kp F3                   &kp F4                   &to NUM_WORD                  &kp C_MUTE               &kp PSCRN                &kp SLCK                 &kp PAUSE_BREAK          &kp KP_NUMLOCK           &kp LEFT_GUI
+     &kp LSHFT                &kp F1                   &kp F2                   &kp F3                   &kp F4                   &to BLTH                      &kp C_MUTE               &kp PSCRN                &kp SLCK                 &kp PAUSE_BREAK          &kp KP_NUMLOCK           &kp LEFT_GUI
 // ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┴────────────────────────┼────────────────────────╯
                                                                                 &kp ESC                  &kp ENTER                &trans                        &trans                   &kp SPACE                &to BASE
 //                                                                            ╰────────────────────────┴────────────────────────┴────────────────────────╯    ╰────────────────────────┴────────────────────────┴────────────────────────╯
