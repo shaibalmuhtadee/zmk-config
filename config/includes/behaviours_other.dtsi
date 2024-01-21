@@ -6,6 +6,21 @@
 
     behaviors {
 
+        /*
+        * Tap dancing shift
+        *
+        * Usage: &td_shift_l
+        * Hold: Shift
+        * Double Tap: Caps Lock
+        */
+
+        td_shift_l: td_shift_l {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <TD_TAPPING_TERM>;
+            bindings = <&kp LEFT_SHIFT>, <&kp CAPSLOCK>;
+        };
+
         lt_num_word: lt_num_word {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;

@@ -10,7 +10,7 @@
       timeout-ms = <COMBO_TERM_SLOW>;
       require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
       key-positions = <LT5 LT4>;
-      layers = <BASE NUM>;
+      layers = <BASE NUM NAV>;
       bindings = <&kp ESC>;
     };
 
@@ -108,6 +108,22 @@
       key-positions = <LB2 LB3>;
       layers = <BASE NUM>;
       bindings = <&kp AMPERSAND>;
+    };
+
+    combo_exclamation {
+      timeout-ms = <COMBO_TERM_SLOW>;
+      require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+      key-positions = <RM0 RM1>;
+      layers = <BASE NUM>;
+      bindings = <&kp EXCL>;
+    };
+
+    combo_at_sign {
+      timeout-ms = <COMBO_TERM_SLOW>;
+      require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+      key-positions = <LM1 LM0>;
+      layers = <BASE NUM>;
+      bindings = <&kp AT_SIGN>;
     };
 
   };
