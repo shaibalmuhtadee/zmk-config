@@ -6,13 +6,13 @@
   combos {
     compatible = "zmk,combos";
 
-    combo_escape {
-      timeout-ms = <COMBO_TERM_SLOW>;
-      require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-      key-positions = <LT5 LT4>;
-      layers = <BASE NUM NAV>;
-      bindings = <&kp ESC>;
-    };
+    // combo_escape {
+    //  timeout-ms = <COMBO_TERM_SLOW>;
+    //  require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+    //  key-positions = <LT5 LT4>;
+    //  layers = <BASE NUM NAV>;
+    //  bindings = <&kp ESC>;
+    // };
 
     combo_bracket_round_l {
       timeout-ms = <COMBO_TERM_SLOW>;
@@ -66,7 +66,7 @@
       timeout-ms = <COMBO_TERM_SLOW>;
       require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
       key-positions = <LM3 LM2>;
-      layers = <BASE NUM>;
+      layers = <BASE>;
       bindings = <&kp MINUS>;
     };
     
@@ -74,7 +74,7 @@
       timeout-ms = <COMBO_TERM_SLOW>;
       require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
       key-positions = <RT2 RT3>;
-      layers = <BASE NUM>;
+      layers = <BASE>;
       bindings = <&kp PLUS>;
     };
 
@@ -82,7 +82,7 @@
       timeout-ms = <COMBO_TERM_SLOW>;
       require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
       key-positions = <LT3 LT2>;
-      layers = <BASE NUM>;
+      layers = <BASE>;
       bindings = <&kp GRAVE>;
     };
 
@@ -90,7 +90,7 @@
       timeout-ms = <COMBO_TERM_SLOW>;
       require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
       key-positions = <RM2 RM3>;
-      layers = <BASE NUM>;
+      layers = <BASE>;
       bindings = <&kp EQUAL>;
     };
 
@@ -98,7 +98,7 @@
       timeout-ms = <COMBO_TERM_SLOW>;
       require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
       key-positions = <RB2 RB3>;
-      layers = <BASE NUM>;
+      layers = <BASE>;
       bindings = <&kp ASTERISK>;
     };
     
@@ -106,7 +106,7 @@
       timeout-ms = <COMBO_TERM_SLOW>;
       require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
       key-positions = <LB2 LB3>;
-      layers = <BASE NUM>;
+      layers = <BASE>;
       bindings = <&kp AMPERSAND>;
     };
 
@@ -114,7 +114,7 @@
       timeout-ms = <COMBO_TERM_SLOW>;
       require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
       key-positions = <RM0 RM1>;
-      layers = <BASE NUM>;
+      layers = <BASE>;
       bindings = <&kp EXCL>;
     };
 
@@ -122,7 +122,7 @@
       timeout-ms = <COMBO_TERM_SLOW>;
       require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
       key-positions = <LM1 LM0>;
-      layers = <BASE NUM>;
+      layers = <BASE>;
       bindings = <&kp AT_SIGN>;
     };
 
